@@ -18,5 +18,7 @@ RUN apt update && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN echo /root/catkin_ws/devel/setup.bash >> /root/.bashrc
+
 WORKDIR /root
 CMD ["/bin/bash"]
